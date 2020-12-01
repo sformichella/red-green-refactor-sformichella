@@ -23,6 +23,11 @@ describe('getName', () => {
 
   it('should throw an error if there is no name', () => {
     expect(() => getName({}))
-      .toThrow('No name or not a strin')
+      .toThrow('No name or not a string')
+  });
+
+  it('should throw an error if name is not a string', () => {
+    expect(() => getName({ name: 17 }))
+      .toThrow('No name or not a string')
   });
 });
