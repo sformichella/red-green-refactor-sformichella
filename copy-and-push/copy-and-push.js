@@ -1,7 +1,9 @@
 const copyAndPush = (arr, entry) => {
-  arr.push(entry);
+  const arrCopy = [...arr];
 
-  return arr;
+  arrCopy.push(entry);
+
+  return arrCopy;
 }
 
 module.exports = {
