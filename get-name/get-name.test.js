@@ -1,12 +1,12 @@
 const { getName } = require('./get-name');
 
+const namedObject = {
+  name: 'Terence Tao',
+  occupation: 'mathematician'
+}
+
 describe('getName', () => {
   it('should return "Terence Tao"', () => {
-
-    const namedObject = {
-      name: 'Terence Tao',
-      occupation: 'mathematician'
-    }
 
     const { name: expected } = namedObject;
     const actual = getName(namedObject);
@@ -14,5 +14,10 @@ describe('getName', () => {
     expect(actual).toEqual(expected);
   });
 
+  it('should return a string', () => {
+    const expected = 'string';
+    const actual = getName(namedObject);
 
+    expect(typeof actual).toEqual(expected);
+  })
 });
