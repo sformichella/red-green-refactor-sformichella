@@ -19,5 +19,9 @@ describe('getName', () => {
     const actual = getName(namedObject);
 
     expect(typeof actual).toEqual(expected);
-  })
+  });
+
+  it('should throw an error if there is no name', () => {
+    
+  });
 });
