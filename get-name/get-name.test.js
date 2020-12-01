@@ -22,6 +22,7 @@ describe('getName', () => {
   });
 
   it('should throw an error if there is no name', () => {
-    
+    expect(() => getName({}))
+      .toThrow('No name or not a strin')
   });
 });
