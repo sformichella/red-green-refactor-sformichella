@@ -1,11 +1,14 @@
 const capitalizeAndFilter = arrOfStrings => {
-  for(let i = 0; i < arrOfStrings.length; i++) {
-    const str = arrOfStrings[i];
+  const accArr = [];
 
-    arrOfStrings[i] = str.toUpperCase();
+  for(let i = 0; i < arrOfStrings.length; i++) {
+    const str = arrOfStrings[i].toUpperCase();
+    const firstLetter = str[0];
+
+    if(firstLetter !== 'F') accArr.push(str)
   }
 
-  return arrOfStrings;
+  return accArr;
 }
 
 module.exports = {
